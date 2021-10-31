@@ -155,6 +155,10 @@
 }
 
 @media screen and(max-width: 720px) {
+
+    .navbar__link {
+        font-size: $size*1.2 !important;
+    }
     .data {
         width: $scalesize !important;
     }   
