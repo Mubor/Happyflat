@@ -1,0 +1,16 @@
+$size: 10px;
+$scalesize: 100%;
+$colprim: lighten(navy,35%);
+$colsec: #eb68eb;
+
+
+@mixin coverimage ($col, $alpha, $bradius){
+    &::before {
+        content: "";
+        position: absolute;
+        width: $scalesize;
+        height: $scalesize;
+        border-radius: $bradius;
+        background-color: rgba($col, $alpha);
+    }
+}

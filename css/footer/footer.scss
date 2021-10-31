@@ -1,0 +1,33 @@
+
+.footer {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    background-color: $colprim;
+    color: white;
+    
+    &__container {
+        padding: 1% 0;
+        width: $scalesize/5;
+        justify-content: space-between;
+    }
+
+    &__container--justify {
+        width: $scalesize;
+    }
+
+    &__item {
+        width: $scalesize/6;
+    }
+
+    &__link {
+        text-decoration: none;
+        font-size: $size*7;
+        color: white;
+    }
+
+    &__text {
+        font-size: $size*1.5;
+        padding: 2% 0;
+    }
+}

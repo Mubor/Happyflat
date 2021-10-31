@@ -1,0 +1,244 @@
+@import "../reset/reset.scss";
+@import "../tools/tools.scss";
+@import "../header/header.scss";
+@import "../main/main.scss";
+@import "../footer/footer.scss";
+
+
+.wrapper {
+    font-family: 'Montserrat';
+}
+
+.df {
+    display:flex
+}
+
+//pc задаем стили, которые не перезаписывались
+@media screen and(min-width: 1025px) {
+    .wrapper>*:not(.main) {
+        width: $scalesize/1.15;
+        margin: 0 auto;
+    }
+
+    .advantages__item {
+        width: $scalesize/4;
+    }
+
+    .product__card {
+        width: $scalesize/4.5;
+    }
+}
+
+//mobile+tab 
+
+@media  screen and(max-width: 1024px) {
+    .wrapper>*,
+    .header>*,
+    .main>*,
+    .introduction>*,
+    .contact>*{
+        width: $scalesize !important;
+    }
+    .header {
+        flex-direction: column;
+        &>* {
+            margin-bottom: 2%;
+        }
+
+        .logo {
+            justify-content: flex-start;
+            margin-left: 7%;
+        }
+    }
+
+    .introduction {
+        position: relative;
+        
+        .introduction__img {
+            height: 50vh;
+        }
+
+        .introduction__text {
+            align-items: center;
+            position: absolute;
+            height: $scalesize;
+
+            .introduction__heading {
+                font-size: 40px;
+
+            }
+        }
+    }
+
+    .heading {
+        font-size: 30px;
+    }
+
+    .advantages--review {
+        .container {
+            flex-wrap: wrap;
+            &>* {
+                width: $scalesize/2;
+            }
+        }
+    }
+
+    .product__container {
+        flex-wrap: wrap;
+
+        .product__card {
+            width: $scalesize/2.1;
+        }
+    }
+
+    .footer__container {
+        width: $scalesize/3.5;
+
+        &--justify {
+            width: $scalesize;
+        }
+    }
+
+    .footer__link {
+        font-size: 50px;
+    }
+
+    //product.scss styles
+
+    .content {
+        flex-direction: column;
+        align-items: center;
+
+        &>* {
+            width: 80% !important;
+            margin-bottom: 2%;
+        }
+
+        .photo {
+            display: none;
+        }
+    }
+
+    //contact.scss style
+
+    .contact {
+        flex-direction: column;
+
+        &>* {
+            margin-bottom: 2%;
+        }
+    }
+}
+
+// Только для about.scss
+@media screen and(max-width: 850px) {
+    .about {
+        &__heading {
+            font-size: $size*4.5;
+        }
+    }
+
+    .employees{
+        &__img>img {
+            height: 30vh;
+        }
+    }
+
+    .award {
+        &__img>img {
+            height: 32vh;
+        }
+        &__text {
+            font-size: $size*1.5;
+        }
+    }
+}
+
+@media screen and(max-width: 720px) {
+    .data {
+        width: $scalesize !important;
+    }   
+
+    .advantages {
+        .container {
+            flex-direction: column;
+            align-items: center;
+        }
+
+        &__item {
+            width: $scalesize/1.5;
+        }
+    }
+
+    .wrap {
+        flex-direction: column;
+        align-items: center;
+
+        &>* {
+            width: $scalesize/1 !important;
+        }
+    }
+
+
+    // about.scss
+    .about, .employees, .award {
+        flex-direction: column;
+        align-items: center;
+        &>* {
+            margin-bottom: 2%;
+        }
+    }
+    .employees, .award {
+        &>* {
+            width: 50%;
+        }
+    }
+
+    .about {
+        width: 80%;
+        &__item {
+            width: 100%;
+            border-right: 0;
+            border-bottom: 3px solid $colprim;;
+        }
+    }
+
+    //product.scss
+    .content > * {
+        width: $scalesize !important;
+    }
+
+    .images {
+        flex-direction: column;
+        
+        &>* {
+            width: $scalesize;
+        }
+    }
+
+    .contact__container {
+        flex-direction: column;
+        align-items: center;
+        margin-bottom: 0;
+        &>* {
+            text-align: center;
+            margin-bottom: 5%;
+        }
+    }
+}
+
+// mobile
+@media screen and (max-width: 519px) {
+    .product__container {
+        flex-direction: column;
+        align-items: center;
+
+        .product__card {
+            width: $scalesize/1.1;
+        }
+    }
+
+    .footer__link {
+        font-size: 30px;
+    }
+}

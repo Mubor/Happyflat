@@ -1,0 +1,48 @@
+.header {
+    background-color: $colprim;
+    padding: 0.5% 0;
+    justify-content: center;
+
+    * {
+        color: white;
+    }
+
+    &>* {
+        width: $scalesize/2;
+        align-items: center;
+    }
+
+    .logo {
+        justify-content: center;
+        .logo__wrap {
+            margin-right: 4%;
+            width: $size*6;
+            height: $size*6;
+            border-radius: 50%;
+            border: 3px solid white;
+            background: url(../../imgs/roof.png) center;
+            background-size: 90% 90%;
+        }
+            
+        .logo__text {
+            font-size: $size*3;
+            font-style: italic;
+        }
+    }
+
+    .navbar {
+        justify-content: space-around;
+
+        .navbar__item {
+            .navbar__link {
+
+                text-decoration: none;
+                font-size: $size*1.6;
+            }
+            .navbar__link--curr {
+                font-weight: bold;
+                color: $colsec;
+            }
+        }
+    }
+}
