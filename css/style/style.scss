@@ -15,6 +15,7 @@
 
 //pc задаем стили, которые не перезаписывались
 @media screen and(min-width: 1025px) {
+
     .wrapper>*:not(.main) {
         width: $scalesize/1.15;
         margin: 0 auto;
@@ -155,10 +156,20 @@
 }
 
 @media screen and(max-width: 720px) {
+    //header
 
+    .logo .logo__wrap{
+        width: $size*4;
+        height: $size*4;
+    }
+    .logo .logo__text {
+        font-size: $size*2;
+    }
     .navbar__link {
         font-size: $size*1.2 !important;
     }
+
+    //
     .data {
         width: $scalesize !important;
     }   
@@ -180,6 +191,10 @@
 
         &>* {
             width: $scalesize/1 !important;
+        }
+
+        &:first-child {
+            text-align: center;
         }
     }
 
@@ -229,10 +244,19 @@
             margin-bottom: 5%;
         }
     }
+    .slogan {
+        font-size: $size*1.8;
+        padding: 3% 2%
+    }
 }
 
 // mobile
 @media screen and (max-width: 519px) {
+
+    .advantages .advantages__img {
+        width: 120px;
+        height: 120px;
+    }
     .product__container {
         flex-direction: column;
         align-items: center;
@@ -243,6 +267,6 @@
     }
 
     .footer__link {
-        font-size: 30px;
+        font-size: 25px;
     }
 }

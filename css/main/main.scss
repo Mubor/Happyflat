@@ -65,36 +65,35 @@
     &__img>*{
         border-radius: 50%;
     }
-    
+    &__img {
+        position: relative;
+        width: 200px;
+        height: 200px;
+        @include coverimage($colsec, .3, 50%);
+        transition: all .3s ease-in-out;
+        
+        &>* {
+            object-fit: cover;
+            width: $scalesize;
+            height: $scalesize;
+        }
+        
+        &:hover {
+            width: 225px;
+            height: 225px;
+            transition: all .3s ease-in-out;
+        }
+        
+        &--review {
+            width: 150px;
+            height: 150px;
+        }
+        
+    }
     &__item {
         flex-direction: column;
         align-items: center;
         margin-bottom: 3%;
-        
-        .advantages__img {
-            position: relative;
-            width: 200px;
-            height: 200px;
-            @include coverimage($colsec, .3, 50%);
-            transition: all .3s ease-in-out;
-            
-            &>* {
-                width: $scalesize;
-                height: $scalesize;
-            }
-            
-            &:hover {
-                width: 225px;
-                height: 225px;
-                transition: all .3s ease-in-out;
-            }
-            
-            &--review {
-                width: 150px;
-                height: 150px;
-            }
-            
-        }
         
         .advantages__text {
             padding: 6% 0;
