@@ -489,6 +489,8 @@ html {
   list-style: decimal;
   list-style-position: inside;
   margin-top: 3%;
+  color: #4d4d4d;
+  font-size: 15px;
 }
 
 .content .text__wrap > * {
@@ -1009,7 +1011,10 @@ html {
             align-items: center;
   }
   .advantages__item {
-    width: 66.66667%;
+    width: 86.95652%;
+  }
+  .advantages__text--review {
+    width: 200%;
   }
   .wrap {
     -webkit-box-orient: vertical;
@@ -1019,12 +1024,10 @@ html {
     -webkit-box-align: center;
         -ms-flex-align: center;
             align-items: center;
+    text-align: center;
   }
   .wrap > * {
     width: 100% !important;
-  }
-  .wrap:first-child {
-    text-align: center;
   }
   .about, .employees, .award {
     -webkit-box-orient: vertical;

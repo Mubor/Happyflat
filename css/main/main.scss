@@ -319,6 +319,8 @@
             list-style: decimal;
             list-style-position: inside;
             margin-top: 3%;
+            color: lighten(black, 30%);
+            font-size: 15px;
 
             &>* {
                 margin-top: 5%;
